@@ -14,6 +14,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p, ul, ol, table, pre, dl {
   margin:0 0 20px;
+  font-size: 1.15rem;
 }
 
 h1, h2, h3 {
@@ -21,7 +22,7 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size:28px;
+  font-size:2rem;
 }
 
 h2 {
@@ -33,7 +34,7 @@ h3, h4, h5, h6 {
 }
 
 a {
-  color:#39c;
+  color:#069;
   font-weight:400;
   text-decoration:none;
 }
