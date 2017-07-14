@@ -1,0 +1,21 @@
+* {
+	font-family:"Myriad Pro",Myriad,"Liberation Sans","Nimbus Sans L","Helvetica Neue";
+}
+code, pre {
+	font-family: "ubuntu mono",monospace;
+}
+.code head {
+	display:block;
+}
+.code head :not(style) {
+	display:none;
+}
+style[contenteditable] {
+	display: block;
+	white-space: pre;
+	padding: 0.625rem;
+	font-size: 1rem;
+	font-family: "ubuntu mono", monospace;
+	background-color: rgba(0,0,0,0.1);
+	border: 1px solid rgba(0,0,0,0.2);
+}
