@@ -1,0 +1,43 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+<style>
+head, style {display: block;}
+[contenteditable] {-webkit-user-modify: read-write-plaintext-only;}
+style:first-of-type {visibility:hidden; position: absolute;}
+#editme {padding: 20px; font-size: 1.5em; white-space: pre; font-family: monospace; white-space:pre; border-radius: 10px; border: 3px solid #aaa; background-color:#dedede; margin: 20px;  font-family:"Courier New", Courier, monospace; }
+body {font-family:Verdana, Geneva, sans-serif; font-size:1.2em; padding: 20px;}
+div {padding: 20px; border: 1px solid rgba(0,0,0,0.3); box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);}
+@keyframes  red {
+  100% { background-color: red;}
+}
+@keyframes  orange {
+  100% { background-color: orange}
+}
+@keyframes  yellow {
+  100% { background-color: yellow;}
+}
+@keyframes  green {
+  100% { background-color: green }
+}
+@keyframes blue {
+  100% { background-color: blue;}
+}
+</style>
+
+<style contenteditable id="editme">
+.rainbow {
+    animation-name: red, orange, yellow, blue, green;
+    animation-duration: 1s, 3s, 5s, 7s, 11s;
+    animation-delay: 3s, 4s, 7s, 12s, 19s;
+    }</style>
+<title></title>
+</head>
+
+<body>
+<div class="rainbow">One animation happens after another.</div>
+</body>
+</html>
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='UTF-8'>
+	<title>animation-iteration-delay</title>
+	<style>
+#foo {
+  width: 100px;
+  height: 100px;
+  background-color: #ccc;
+}
+.animate {
+  -webkit-animation: yellow;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: 1;
+  
+  animation: yellow;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+@-webkit-keyframes yellow {
+  0% {
+    background-color: blue; 
+    transform: scale(0.5);
+  }
+  50% { background-color: red;}
+  100% {
+    background-color: yellow;
+    transform: scale(1.5);
+  }
+}
+
+@keyframes yellow {
+  0% {
+    background-color: blue; 
+    transform: scale(0.5);
+  }
+  50% { background-color: red;}
+  100% {
+    background-color: yellow;
+    transform: scale(1.5);
+  }
+}
+	</style>
+</head>
+<body>
+	<div id="foo" class="animate"></div>
+	<script>
+var iteration = 0;
+var el = document.getElementById('foo');
+
+el.addEventListener('webkitAnimationEnd', function(e){
+  var time = ++iteration * 1000;
+
+  el.classList.remove('animate');
+  
+  setTimeout(function(){
+    el.classList.add('animate');
+  }, time);
+
+});
+
+	</script>
+</body>
+</html>

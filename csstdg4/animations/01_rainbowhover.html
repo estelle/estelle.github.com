@@ -1,0 +1,58 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+<style>
+head, style {display: block;}
+[contenteditable] {-webkit-user-modify: read-write-plaintext-only;}
+style:first-of-type {visibility:hidden;}
+#editme {padding: 20px; font-size: 1.5em; white-space: pre; font-family: monospace; white-space:pre; border-radius: 10px; border: 3px solid #aaa; background-color:#dedede; margin: 20px;  font-family:"Courier New", Courier, monospace; height:300px; overflow:scroll; }
+body {font-family:Verdana, Geneva, sans-serif; font-size:1.2em; padding: 20px;}
+
+div {
+  font-size: 2em;
+  padding: 10px;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+  border: 1px solid rgba(0,0,0,0.3);
+  margin: 10px 100px;}
+</style>
+
+<style contenteditable id="editme">div {
+  background-color: black;
+  color: white;
+  transition: 10s;
+}
+div:hover {
+  background-color: white;
+  color: black;
+}
+#animation:hover {
+	-webkit-animation: rainbow 10s;
+	animation: rainbow 10s;	
+}
+@-webkit-keyframes rainbow {
+	0% { background-color: hsl(0, 100%, 0%);}
+	25% { background-color: hsl(90, 100%, 25%);}
+	50% { background-color: hsl(180, 100%, 50%);}
+	75% { background-color: hsl(270, 100%, 75%);}
+	100% { background-color: hsl(360, 100%, 100%);}
+}
+@keyframes rainbow {
+	0% { background-color: hsl(0, 100%, 0%);}
+	25% { background-color: hsl(90, 100%, 25%);}
+	50% { background-color: hsl(180, 100%, 50%);}
+	75% { background-color: hsl(270, 100%, 75%);}
+	100% { background-color: hsl(360, 100%, 100%);}
+}
+</style>
+<title></title>
+</head>
+
+<body>
+<p>Hover over divs</p>
+<div id="animation">Animation</div>
+<div id="transition">Transition</div>
+</body>
+</html>
+

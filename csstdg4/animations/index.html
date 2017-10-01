@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+<head>
+  <title>CSS3 Animations</title>
+</head>
+<body>
+<h1 class="entry-title">CSS3 Animations</h1>	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p>Animation Chapter File examples</p>
+<ul>
+<li>Page 55: <br>
+  <a href="/animations/01_rainbowhover.html">Rainbow</a><br>
+  Animating through various colors, starting with black and ending with
+  white</li>
+</ul>
+<p>Setting Up Your Keyframe Animation</p>
+<ul>
+  
+  <li>Page 57: <br>
+    <a href="/animations/name.html">Weird animation names</a> work</li>
+  <li>Page 57: <br>
+    <a href="/animations/badnames.html">Keyword as Animation name</a></li>
+  <li>Page 58: <br>
+    <a href="/animations/02_W.html">The W animation</a><br>
+    The W @keyframes animation, when attached to an absolutely positioned element, moves that element along a W-shaped path. W has five keyframes, at the 0%, 25%, 50%, 75%, and 100% marks. The from is the 0% mark. The to is the 100% mark.</li>
+  <li>Page 59: <br>
+    <a href="/animations/no0or100.html">No 0% or 100% keyframes</a><br>
+    If a 0% or from keyframe is not specified,  the browser constructs a
+    0% keyframe using the original values of the properties being animated, as if the 0%
+    keyframe were declared with the same property values that impact the element when
+    no animation was applied. Same thing happens for the 100% or to keyframe if not defined.</li>
+  <li>Page 60: <br>
+    <a href="/animations/04_W.html">The W animation revisited</a><br>
+    Repeating keyframe properties is allowed now.</li>
+  <li>Page 61: <br>
+    <a href="/animations/nomidpoint.html"> no mid point</a> - auto doesn't animate well<br>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties">MDN's list of Animatable Properties</a></li>
+  <li>Page 62: <br>
+    <a href="/animations/round2.html">Setting/omitting initial values and 0%</a><br>
+    Your initial values matter. Observe the 6th example.</li>
+  <li>Page 63: <br>
+    <a href="/animations/appendRule.html">Animation API</a><br>
+    Dynamically Changing @keyframes.</li>
+  </ul>
+<p>The <code>animation-name</code> and <code>animation-duration</code> properties</p>
+<ul>
+  <li>Page 64:<br>
+    <a href="/animations/badnames.html">Unfortunate Animation name</a></li>
+  <li>Page 65 & 67:<br>
+    <a href="/animations/nameaddedlater.html">extra animation name</a> of an animation you can add later.</li>
+  
+  <li>Page 65: <br>
+    <a href="/animations/specificity2.html">Last animation takes precedence</a></li>
+  <li>Page 67:<br>
+    <a href="/animations/duration_broken_value.html">animation-duration with invalid value</a></li>
+  </ul>
+<p>The <code>animation-iteration</code> property</p>
+<ul>
+  <li>Page 68:<br>
+    <a href="/animations/odditeration.html">float value</a><br>
+    Try changing the value of the animation-iteration-count. You'll note the 0.25 value will make the animation iterate less than one full cycle.</li>
+  <li>Page 68:<br><a href="/animations/flag.html">.flag</a> animation</li>
+  <li>Page 70:<br>
+<a href="/animations/ball6.html">ball</a> animation</li>
+<li>Page 72: 
+  <br>
+  <a href="/animations/fourtypercent.html">partial animation</a> animation</li>
+</ul>
+<p>The <code>animation-delay</code> property</p>
+<ul>
+  <li>Page 72: <br>
+    <a href="/animations/ball_animation_delay_negative.html"> ball animation with a negative delay</a></li>
+  
+  <li>Page 74:<br>
+    <a href="/animations/events.html">animation events</a><br>
+    <a href="/animations/events.html">animation events with negative delay</a></li>
+  
+  <li>Page 75:
+    <br>
+    <a href="/animations/animationchain.html">Animation Chaining</a> 
+    </li>
+  
+  <li>Page 76:<br>
+  <a href="/animations/animationchain2a.html">Animation after animation</a></li>
+  <li>Page 78: <br>
+    <a href="/animations/animationchain2.html">Animation Chaining</a> with JS  
+  <li>Page 81:<br>
+      <a href="/animations/animation-iteration-delay1.html"> animation iteration delay</a><br>
+      <a href="/animations/animation-iteration-delay2.html"> animation-iteration delay</a> within the @keyframe<br>
+      <a href="/animations/animation-iteration-delay3.html"> animation-iteration delay</a> within the @keyframe<br>
+    <a href="/animations/animation-iteration-delay4.html"> animation-iteration delay</a> within the @keyframe</li>
+</ul>
+<p>The <code>animation-timing-function</code>, including Cubic Bezier curves </p>
+<ul>
+  <li>Page 84:<br><a href="http://cubic-bezier.com/#.17,.67,.83,.67">cubic-bezier.com(.17,.67,.83,.67)</a></li>
+  <li><a href="/animations/cubicbezier.html"> cubic bezier</a></li>
+  <li><a href="/animations/cubicbezierprint.html"> cubic bezier &#8211; visual representation</a></li>
+  <li><a href="/animations/cubicbezierprint2.html">  cubic bezier &#8211; visual representation 2</a></li>
+  <li><a href="/animations/cubicbezierprint2ff.html"> cubic bezier &#8211; visual representation 3</a></li>
+  <li><a href="/animations/cubicbezierprint_atf.html">  cubic bezier &#8211; visual representation 4</a></li>
+  <li><a href="/animations/ball1.html">Bouncing Ball</a></li>
+  <li><a href="/animations/sprite.html">steps timing function </a> - dancer</li>
+  <li><a href="/animations/sprite1.html">steps timing function </a> - dancer moving around</li>
+  <li>Animating the timing function    </li>
+  <li>Page 92: <a href="/animations/cubicbezierprint2.html">Changing the timing function mid animation</a></li>
+  <li>Page 95: <a href="/animations/ball3.html">Changing timing on bouncing ball</a></li>
+</ul>
+<p>The <code>animation-play-state</code> property </p>
+<ul>
+  <li><a href="http://standardista.com/animations/ball4.html">Stop the ball</a> by hovering over it.</li>
+</ul>
+<p>The <code>animation-fill-mode</code> property
+    </p>
+<ul>
+  <li>Page 98: <a href="http://www.standardista.com/animations/moveme.html">Partial iteration with fill mode</a></li>
+  <li>Page 99: <a href="/animations/halfiterationforwards.html">Partial iteration with fill-mode</a></li>
+  <li>Page 99: <a href="/animations/nointerations2.html">No duration</a>, but animation still happens</li>
+</ul>
+</li>
+<li>Page 102: <a href="/animations/snow.html">Snowflake</a>. Stop &amp; Start animation<li>
+<li>Page 103: <a href="/animations/important1.html">Specificity of animations</a></li>
+<li>Page 103: <a href="/animations/important.html">!important</a> is ignored in an animation @keyframes rule</li>
+
+<li>Page 104: Animation Order<br>
+<a href="/animations/animationorder.html">running animations</a> take precedence<br>
+<a href="/animations/animationorder2.html">last animation declared</a> takes precendce<br/>
+<a href="/animations/displaysnow.html">Snowflake</a>. Stop &amp; Start animation</li>
+
+<li><a href="/animations/animation_iteration_when_no_duration.html"> animation_iteration-count with no animation-duration</a></li>
+</ul>
+			</div></body>
+</html>

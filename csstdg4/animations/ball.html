@@ -1,0 +1,62 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+<style>
+head, style {display: block;}
+[contenteditable] {-webkit-user-modify: read-write-plaintext-only;}
+style:first-of-type {visibility:hidden;}
+#editme {padding: 20px; font-size: 1.5em; white-space: pre; font-family: monospace; white-space:pre; border-radius: 10px; border: 3px solid #aaa; background-color:#dedede; margin: 20px;  font-family:"Courier New", Courier, monospace; height: 200px; overflow: scroll;}
+body {font-family:Verdana, Geneva, sans-serif; font-size:1.2em}
+
+div {
+  padding: 20px; margin: 20px;
+  border: 5px black solid !important;
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 2rem;
+}
+</style>
+
+<style contenteditable id="editme">
+    .ball {
+      height: 50px;
+      width: 50px;
+      background-color: blue;
+      border-radius: 50%;
+    }
+    .ball {
+        animation-name: bounce;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in;
+        animation-direction: alternate;
+      }
+      @keyframes bounce {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(500px); }
+      }
+
+      .ball {
+        -webkit-animation-name: bounce;
+        -webkit-animation-duration: 1s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-timing-function: ease-in;
+        -webkit-animation-direction: alternate;
+      }
+      @-webkit-keyframes bounce {
+        0% { transform: translateY(0); }
+        95% { transform: translateY(400px) scale(1);}
+        100% { transform: translateY(400px) scale(1.1, .9);}
+      }
+</style>
+<title></title>
+</head>
+
+<body>
+<div class="ball"></div>
+</body>
+</html>
+
