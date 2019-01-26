@@ -1,0 +1,74 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+<style>
+head, style {display: block;}
+[contenteditable] {-webkit-user-modify: read-write-plaintext-only;}
+style:first-of-type {visibility:hidden;}
+#editme {padding: 20px; font-size: 1.5em; white-space: pre; font-family: monospace; white-space:pre; border-radius: 10px; border: 3px solid #aaa; background-color:#dedede; margin: 20px;  font-family:"Courier New", Courier, monospace; height: 200px; overflow: scroll;}
+body {font-family:Verdana, Geneva, sans-serif; font-size:1.2em}
+
+div {
+  padding: 20px; margin: 20px;
+  border: 5px black solid !important;
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 2rem;
+}
+</style>
+
+<style contenteditable id="editme">
+    .ball {
+      height: 50px;
+      width: 50px;
+      background-color: blue;
+      border-radius: 50%;
+    }
+    .ball {
+        animation-name: bounce;
+        animation-duration: 4s;
+        animation-timing-function: ease-in;
+      }
+
+    .ball {
+        position: relative;
+        -webkit-animation-name: bounce;
+        -webkit-animation-duration: 2s;
+        -webkit-animation-fill-mode: forwards;
+      }
+
+@-webkit-keyframes bounce {
+  0%, 30%, 58%, 80%, 95% {
+    transform: translatey(0);
+    -webkit-animation-timing-function: ease-in;
+  }
+  30% {
+    transform: translatey(100px);
+  }
+  58% {
+    transform: translatey(200px);
+  }
+  80% {
+    transform: translatey(300px);
+  }
+  95% {
+    transform: translatey(360px);
+  }
+  15%, 45%, 71%, 89%, 100% {
+     transform: translatey(380px);
+    -webkit-animation-timing-function: ease-out;
+  }
+}
+
+</style>
+<title></title>
+</head>
+
+<body>
+<div class="ball"></div>
+</body>
+</html>
+

@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>3D Flash Banner</title>
+<style>
+#shell,
+#shell div  {
+	overflow: hidden;
+	height:90px;
+	width: 728px;
+	position: absolute;
+	top: 0;
+	left: 0;	
+}
+#shell div {
+	opacity:0;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform-style: preserve-3d;
+	-webkit-perspective: 3500;
+	-webkit-perspective-origin: -69px 30px;
+}
+
+#shell div:first-of-type {	
+	background-color: indianred;
+	-webkit-animation: 'flip' 10s;
+}
+#shell div:nth-of-type(2) { background-color: papayawhip;
+
+	-webkit-animation: 'flip' 10s 9s;}
+#shell div:nth-of-type(3) { background-color: lightseagreen;
+	-webkit-animation: 'flip' 10s 18s;}
+#shell div:last-of-type { 	
+	background-color: slateblue;
+
+	-webkit-animation: 'flip' 10s 27s;}
+
+@-webkit-keyframes 'flip' {
+	0% {
+		opacity: 1;
+		-webkit-transform: rotatex(180deg);
+		-webkit-transform: rotate3d(1, 0, 0, 180deg) translateZ(0px);
+		-webkit-transform-origin: left top;
+	}
+	8% {
+		opacity: 1;
+		-webkit-transform: rotatex(0);
+		-webkit-transform: rotate3d(1, 0, 0, 0deg) translateZ(0);
+		-webkit-transform-origin: left top;
+	} 
+	92% {
+		
+		opacity: 1;
+		-webkit-transform: rotatex(0);
+		-webkit-transform: rotate3d(1, 0, 0, 0deg) translateZ(0);
+		-webkit-transform-origin: left bottom;
+	}
+	100% {
+		
+		opacity: 1;
+		-webkit-transform: rotatex(-180deg);
+		-webkit-transform: rotate3d(1, 0, 0, -180deg) translateZ(0px);
+		-webkit-transform-origin: left bottom;
+		
+	}
+}
+
+
+</style>
+</head>
+
+<body>
+<div id="shell">
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+</div>
+</body>
+</html>

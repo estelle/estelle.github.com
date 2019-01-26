@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Flag</title>
+<style>
+head, style {display: block;}
+[contenteditable] {-webkit-user-modify: read-write-plaintext-only;}
+style:first-of-type {visibility:hidden;}
+#editme {padding: 20px; font-size: 1.5em; white-space: pre; font-family: monospace; white-space:pre; border-radius: 10px; border: 3px solid #aaa; background-color:#dedede; margin: 20px auto; width: 90%; font-family:"Courier New", Courier, monospace;}
+body {font-family:Verdana, Geneva, sans-serif; font-size:1.2em}
+</style>
+<style>@keyframes red {
+  0%, 10% { transform: rotate(0deg);}
+  100% { transform: rotate(360deg);}
+}
+@keyframes blue {
+  100% { background-color: blue;}
+}
+@keyframes white {
+  100% { border-width: 20px; }
+}
+
+.flag {
+    height: 100px; 
+    width: 100px; 
+    border: 1px solid; 
+    box-sizing: border-box;
+    background-color: red;
+    animation-name: red, white, blue;
+    animation-duration: 2s, 4s, 6s;
+    animation-iteration-count: 6, 3, 2;
+    }</style>
+</head>
+
+<body>
+<div class="flag"></div>
+</body>
+</html>

@@ -1,0 +1,129 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+<style>
+head, style {display: block;}
+[contenteditable] {-webkit-user-modify: read-write-plaintext-only;}
+style:first-of-type {visibility:hidden; position: absolute;}
+#editme {padding: 20px; font-size: 1.5em; height:300px; overflow: scroll; white-space: pre; font-family: monospace; white-space:pre; border-radius: 10px; border: 3px solid #aaa; background-color:#dedede; margin: 20px;  font-family:"Courier New", Courier, monospace; }
+body {font-family:Verdana, Geneva, sans-serif; font-size:1.2em; padding: 20px;}
+li {padding: 20px; border: 1px solid rgba(0,0,0,0.3); box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);}
+@keyframes  red {
+  100% { background-color: red;}
+}
+@keyframes  orange {
+  100% { background-color: orange}
+}
+@keyframes  yellow {
+  100% { background-color: yellow;}
+}
+@keyframes  green {
+  100% { background-color: green }
+}
+@keyframes blue {
+  100% { background-color: blue;}
+}
+li {background-color:white;
+animation-fill-mode: forwards;}
+</style>
+
+<style contenteditable id="editme">
+li:first-of-type {
+        animation-name: red;
+        animation-duration: 1s;
+    }
+    li:nth-of-type(2) {
+        animation-duration: 2s;
+    }
+    li:nth-of-type(3)  {
+        animation-duration: 3s;
+    }
+    li:nth-of-type(4) {
+        animation-duration: 4s;
+    }
+    li:nth-of-type(5)  {
+        animation-duration: 5s;
+    }
+
+@keyframes  red {
+  100% { background-color: red;}
+}
+@keyframes  orange {
+  100% { background-color: orange}
+}
+@keyframes  yellow {
+  100% { background-color: yellow;}
+}
+@keyframes  green {
+  100% { background-color: green }
+}
+@keyframes blue {
+  100% { background-color: blue;}
+}
+</style>
+<title></title>
+</head>
+
+<body>
+<ul>
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+  <li>4</li>
+  <li>5</li>
+</ul>
+</body>
+<script>
+document.querySelectorAll('li')[0].addEventListener( 'webkitAnimationEnd',
+      function(e) {
+          document.querySelectorAll('li')[1].style.webkitAnimationName = 'orange';
+      },
+      false );
+
+document.querySelectorAll('li')[1].addEventListener( 'webkitAnimationEnd',
+      function(e) {
+          document.querySelectorAll('li')[2].style.webkitAnimationName = 'yellow';
+      },
+      false );
+
+document.querySelectorAll('li')[2].addEventListener( 'webkitAnimationEnd',
+      function(e) {
+          document.querySelectorAll('li')[3].style.webkitAnimationName = 'green';
+      },
+      false );
+
+document.querySelectorAll('li')[3].addEventListener( 'webkitAnimationEnd',
+      function(e) {
+          document.querySelectorAll('li')[4].style.webkitAnimationName = 'blue';
+      },
+      false );
+
+
+document.querySelectorAll('li')[0].addEventListener( 'animationend',
+      function(e) {
+          document.querySelectorAll('li')[1].style.animationName = 'orange';
+      },
+      false );
+
+document.querySelectorAll('li')[1].addEventListener( 'animationend',
+      function(e) {
+          document.querySelectorAll('li')[2].style.animationName = 'yellow';
+      },
+      false );
+
+document.querySelectorAll('li')[2].addEventListener( 'animationend',
+      function(e) {
+          document.querySelectorAll('li')[3].style.animationName = 'green';
+      },
+      false );
+
+document.querySelectorAll('li')[3].addEventListener( 'animationend',
+      function(e) {
+          document.querySelectorAll('li')[4].style.animationName = 'blue';
+      },
+      false );</script>
+
+</html>
+

@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>appendRule, deleteRule, findRule</title>
+  <style>
+#ball {
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+  border-radius: 50%;
+  -webkit-animation: bounce 5s infinite linear alternate;
+  animation: bounce 5s infinite linear alternate;
+}
+@-webkit-keyframes bounce {
+  0% {
+    transform: translate(0vw, 0vh);
+  }
+  10% {
+    transform: translate(0vw, 9vh);
+  }
+  20% {
+    transform: translate(0vw, 18vh);
+  }
+  30% {
+    transform: translate(0vw, 27vh);
+  }
+  40% {
+    transform: translate(0vw, 36vh);
+  }
+  50% {
+    transform: translate(0vw, 45vh);
+  }
+  60% {
+    transform: translate(0vw, 54vh);
+  }
+  70% {
+    transform: translate(0vw, 63vh);
+  }
+  80% {
+    transform: translate(0vw, 72vh);
+  }
+  90% {
+    transform: translate(0vw, 81vh);
+  }
+  100% {
+    transform: translate(0vw, 90vh);
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: translate(0vw, 0vh);
+  }
+  10% {
+    transform: translate(0vw, 9vh);
+  }
+  20% {
+    transform: translate(0vw, 18vh);
+  }
+  30% {
+    transform: translate(0vw, 27vh);
+  }
+  40% {
+    transform: translate(0vw, 36vh);
+  }
+  50% {
+    transform: translate(0vw, 45vh);
+  }
+  60% {
+    transform: translate(0vw, 54vh);
+  }
+  70% {
+    transform: translate(0vw, 63vh);
+  }
+  80% {
+    transform: translate(0vw, 72vh);
+  }
+  90% {
+    transform: translate(0vw, 81vh);
+  }
+  100% {
+    transform: translate(0vw, 90vh);
+  }
+}
+  </style>
+</head>
+<body>
+<div id="ball"></div>
+<input type="button" id="button" value="Change the path">
+<input type="button" value="reattach animation" id="reattach"/>
+
+<script>
+var pathChanger = {
+  anim : document.styleSheets[0].cssRules[1],
+  
+  init : function () {
+    pathChanger.events();
+
+    // polyfill if insertRule exists when appendRule does not
+    if(document.styleSheets[0].cssRules[1].insertRule && 
+      !document.styleSheets[0].cssRules[1].appendRule) {
+      pathChanger.anim.appendRule = pathChanger.anim.insertRule;
+    }
+  },
+
+  // attach the events to both buttons
+  events  : function () {
+    var button = document.getElementById('button');
+    var reattach = document.getElementById('reattach');
+    
+    button.addEventListener('click', function() {
+      pathChanger.changePath();
+    }, false);
+    
+    reattach.addEventListener('click', function(e) {
+      pathChanger.removeAndAddAnimation(e);
+    }, false);
+    
+  },
+  
+
+  // button event
+  // removes & reattaches ID so animation is reattached to ball
+  // for animation to restart.
+  removeAndAddAnimation : function () {
+    var ball = document.getElementById('ball');
+    ball.removeAttribute('id');
+      setTimeout(function(){
+        document.getElementsByTagName('div')[0].setAttribute('id', 'ball');
+      }, 500);
+  },
+  
+  changePath : function () {
+    // pick a random keyframe to remove 
+    // add a new random keyframe with a new value
+    var selectorToRemove = pathChanger.findAKeyframe(),
+        selectorToAdd =  pathChanger.getAValue(100);
+    pathChanger.removeKeyframe(selectorToRemove);
+    pathChanger.addKeyframeValue(selectorToAdd);
+  },
+   
+  getAValue : function (n) {
+    // var value = Math.round(Math.random() * n);
+    // console.log(value);
+    // return value;
+    return Math.round(Math.random() * n);
+  },
+  
+  findAKeyframe : function () {
+    var randomNumber, rule;
+    
+    do {
+        randomNumber = pathChanger.getAValue(100); 
+        rule = pathChanger.doesKeyframeExist(randomNumber)
+    } while (rule !== false);
+    
+    return randomNumber;
+  },
+  
+  doesKeyframeExist : function (number) {
+    var anim = pathChanger.anim,
+        exists = anim.findRule(number + '%');
+    return exists || false;
+  },
+  
+  addKeyframeValue : function (selector) {
+    var anim = document.styleSheets[0].cssRules[1],
+        left = pathChanger.getAValue(90),
+        top = pathChanger.getAValue(90);
+    anim.appendRule(selector + '% { transform: translate(' + 
+                    left + 'vw, ' + top + 
+                    'vh); animation-timing-function: ease-in-out}');
+  },
+  
+  removeKeyframe : function (selector) {
+    var anim = pathChanger.anim;
+    anim.deleteRule(selector + "%");
+  }
+  
+}
+
+pathChanger.init();</script>
+</body>
+</html>
